@@ -36,16 +36,16 @@ body {
 }
 
 .h {
+	font-family: 'Poppins', sans-serif;
 	line-height: 1;
 	margin: 20px 0;
 	color: #fff;
-	font-size: 45px;
-	font-weight: 600;
+	font-size: 27px;
+	font-weight: 700;
 }
 
 .text {
 	color: #fff;
-	/*color: lightgrey;*/
 }
 
 .blue {
@@ -56,7 +56,7 @@ body {
 	background: var(--blue);
 	padding: 10px;
 	border-radius: 5px;
-	box-shadow: 1px 7px 0px rgba(50, 50, 50, 0.3);;
+	box-shadow: 1px 7px 0px rgba(50, 50, 50, 0.3);
 }
 
 .blue span {
@@ -129,6 +129,34 @@ input[type=submit]:active {
 
 /*-----------------------------------------------------------*/
 
-@media (max-width: 375px;){
+@media (max-width: 375px){
+
+body {
+	height: auto;
+	background: var(--red) url(images/bg-intro-mobile.png) center center no-repeat;
+}
+
+.content {
+	height: auto;
+	width: 85%;
+	flex-direction: column;
+	align-items: center;
+}
+
+.right {
+	width: auto;
+	margin: 50px auto
+}
+.left {
+	width: auto;
+}
+
+.h {
+	text-align: center;
+}
+
+.text {
+	text-align: center;
+}
 
 }
