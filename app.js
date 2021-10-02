@@ -18,29 +18,29 @@ function checkInputs() {
 
 	// Valid Name
 	if (name.length == 0) {
-		setErrorFor(input_name);
+		setErrorFor(input_name, "First Name cannot be empty");
 	} else {
 		setSuccessFor(input_name);
 	}
 	// Valid Last Name
 	if (last.length==0) {
-		setErrorFor(input_last);
+		setErrorFor(input_last, "First Name cannot be empty");
 	} else {
 		setSuccessFor(input_last);
 	}
 	// Valid email with regex
 	if (email.length==0) {
-		setErrorFor(input_email);
+		setErrorFor(input_email, "First Name cannot be empty");
 	}	else if (!IsEmail(email)){
-		setErrorFor(input_email);
+		setErrorFor(input_email, "Looks like this is not an email");
 	}	else {
 		setSuccessFor(input_email);
 	}
 	// Valid password with regex (password>=8 && [A-Za-z] && [0-9] && [@$!%#-?&])
 	if (passw.length==0) {
-		setErrorFor(input_passw);
+		setErrorFor(input_passw, "First Name cannot be empty");
 	}	else if (!IsPassw(passw)){
-		setErrorFor(input_passw);
+		setErrorFor(input_passw, "Password no cumple con los requisitos");
 	}	else {
 		setSuccessFor(input_passw);
 	}
@@ -59,20 +59,14 @@ function IsPassw(password) {
 
 // -----------------------------
 
-function setErrorFor(input) {
-	// const formControl = input.parentElement;
-	// const small = formControl.querySelector('small');
-	// formControl.className = 'form-control error';
-	// small.innerText = message;
-
-	input.style.borderColor = "red";
-	input.style.backgroundImage = "url('images/icon-error.svg')";
-	input.style.backgroundPosition = "95% 50%";
-	input.style.backgroundRepeat = "no-repeat";
+function setErrorFor(input, message) {
+	const formControl = input.parentElement;
+	const small = formControl.querySelector('small');
+	formControl.className = 'form-control error';
+	small.innerText = message;
 }
 
 function setSuccessFor(input) {
-	// const formControl = input.parentElement;
-	// formControl.className = 'form-control success';
-	input.style.borderColor = "var(--green)";
+	const formControl = input.parentElement;
+	formControl.className = 'form-control success';
 }
