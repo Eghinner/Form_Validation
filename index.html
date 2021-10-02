@@ -14,7 +14,7 @@
 
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   <style>
-    .attribution { font-size: 11px; text-align: center; display: none; }
+    .attribution { font-size: 11px; text-align: center; /*display: none;*/ }
     .attribution a { color: hsl(228, 45%, 44%); }
   </style>
 
@@ -35,12 +35,12 @@
     <div class="left">
       <div class="blue" id="blue">Try it free 7 days <span>then $20/mo. thereafter</span></div>
       <div class="target">
-        <form onsubmit="return false;" id="form" method="post">
-          <input type="text" id="name" name="name" placeholder="First Name" autocomplete="off">
-          <input type="text" id="last" name="last" placeholder="Last Name" autocomplete="off">
-          <input type="text" id="email" name="email" placeholder="Email Address" autocomplete="off">
-          <input type="text" id="passw" name="passw" placeholder="Password" autocomplete="off">
-          <input type="submit" id="value" value="Claim your free trial"> 
+        <form id="form" method="post">
+          <input type="text"      id="name"   name="name"   placeholder="First Name"    autocomplete="off">
+          <input type="text"      id="last"   name="last"   placeholder="Last Name"     autocomplete="off">
+          <input type="email"     id="email"  name="email"  placeholder="Email Address" autocomplete="off">
+          <input type="password"  id="passw"  name="passw"  placeholder="Password"      autocomplete="off">
+          <input type="submit"    id="value"  value="Claim your free trial"> 
         </form>
         <div class="term">By clicking the button, you are agreeing to our <span>Terms and Services</span> </div>
       </div>
@@ -50,7 +50,7 @@
   <footer>
     <p class="attribution">
       Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-      Coded by <a href="#">Eghinner Hernandez</a>.
+      Coded by <a href="https://github.com/Eghinner">Eghinner Hernandez</a>.
     </p>
   </footer>
   <script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>
